@@ -1,16 +1,13 @@
 let bookList = [];
 const formBook = document.querySelector('#book-form');
-const submitBut = document.querySelector('.user-input-submit');
 const form = document.querySelectorAll('.form-input');
 const pageBookList = document.querySelector('.book-list');
 
-const removeBook = (id) => {
-  const newBookList = bookList.filter((book) => book.id !== parseInt(id));
-  bookList = newBookList;
-  pageBookList.innerHTML = ``;
-  insertContent();
-  updateStorage();
-};
+function updateStorage() {
+  const stringfiedBL = JSON.stringify(bookList);
+  localStorage.setItem('booklist', stringfiedBL);
+}
+
 function insertContent() {
   bookList.forEach((book) => {
     pageBookList.innerHTML += `
@@ -24,8 +21,20 @@ function insertContent() {
   });
   const removeBtn = document.querySelectorAll('.remove-btn');
   removeBtn.forEach((button) => {
-    button.addEventListener('click', () => removeBook(button.id));
+    button.addEventListener('click', () => {
+      const newBookList = bookList.filter((book) => book.id.toString() !== button.id);
+      bookList = newBookList;
+      pageBookList.innerHTML = '';
+      insertContent();
+      updateStorage();
+    });
   });
+}
+
+function updateUserInterface() {
+  const retrievedData = localStorage.getItem('booklist');
+  bookList = JSON.parse(retrievedData);
+  insertContent();
 }
 
 if (!localStorage.getItem('booklist')) {
@@ -34,18 +43,8 @@ if (!localStorage.getItem('booklist')) {
   updateUserInterface();
 }
 
-function updateStorage() {
-  const stringfiedBL = JSON.stringify(bookList);
-  localStorage.setItem('booklist', stringfiedBL);
-}
-
-function updateUserInterface() {
-  const retrievedData = localStorage.getItem('booklist');
-  bookList = JSON.parse(retrievedData);
-  insertContent();
-}
-//random id
-const randomId = () => Math.round(Math.random() * 10000); //random id function
+// random id
+const randomId = () => Math.round(Math.random() * 10000); // random id function
 
 function onSubmition(e) {
   e.preventDefault();
@@ -53,8 +52,8 @@ function onSubmition(e) {
   const author = form[1].value;
   const input = {
     id: randomId(),
-    title: title,
-    author: author,
+    title,
+    author,
   };
   bookList.push(input);
   pageBookList.innerHTML = '';

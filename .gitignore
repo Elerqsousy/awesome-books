@@ -3,7 +3,4 @@ node_modules/
 
 test.md
 .vscode
-.stylelintrc.json
-.eslintrc.json
-.hintrc
 package-lock.json

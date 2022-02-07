@@ -25,7 +25,7 @@ Check the [Live Demo](https://elerqsousy.github.io/awesome-books/) deployed on g
 
 - GitHub: [@Elerqsousy](https://github.com/Elerqsousy)
 
-👤 **DAgic Zewdu**
+👤 **Dagic Zewdu**
 
 - GitHub: [@Dagic-zewdu ](https://github.com/Dagic-zewdu)
 
