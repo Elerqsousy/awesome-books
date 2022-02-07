@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# the MUSICAL
+# Awesome Books
 
 > Sample Design of a book List.
 
