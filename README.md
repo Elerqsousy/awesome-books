@@ -6,8 +6,7 @@
 
 ## Screensot
 
-![screenshot](./screenshot.png) 
-
+![screenshot](./Screenshot.png)
 
 ## Built With
 
