@@ -1,0 +1,37 @@
+{
+  "name": "chess-world-championship",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": "eslint main.js",
+    "lint:css": "stylelint **/*.{css,scss}",
+    "lint:html": "hint ./*.html && hint ./**/*.html",
+    "lintfix:js": "eslint main.js --fix",
+    "lintfix:css": "stylelint **/*.{css,scss} --fix",
+    "lintfix:html": "hint ./*.html --fix && hint ./**/*.html --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sboursen/Chess-World-Championship.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sboursen/Chess-World-Championship/issues"
+  },
+  "homepage": "https://github.com/Sboursen/Chess-World-Championship#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "hint": "^6.1.9",
+    "stylelint": "^14.3.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-csstree-validator": "^2.0.0",
+    "stylelint-scss": "^4.1.0"
+  }
+}
