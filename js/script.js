@@ -55,7 +55,7 @@ function onSubmition(e) {
     title,
     author,
   };
-  bookList.push(input);
+  bookList= bookList.concat(input);
   pageBookList.innerHTML = '';
   insertContent();
   updateStorage();
